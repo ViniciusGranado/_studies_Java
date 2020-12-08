@@ -7,7 +7,7 @@ public class Exercise04 {
     System.out.print("Digite uma letra: ");
     char userLetter = input.next().charAt(0);
 
-    switch (userLetter) {
+    switch (Character.toLowerCase(userLetter)) {
       case 'a':
       case 'e':
       case 'i':
