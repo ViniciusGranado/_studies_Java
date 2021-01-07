@@ -31,5 +31,7 @@ public class Exercise01 {
         System.out.print(b[i] + ", ");
       }
     };
+
+    scanner.close();
   }
 }
