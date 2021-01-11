@@ -17,7 +17,9 @@ public class Exercise11 {
         evenValues++;
       };
     }
-    
+
     System.out.println("\nHá " + evenValues + " valores pares no array.");
+
+    input.close();
   }
 }
