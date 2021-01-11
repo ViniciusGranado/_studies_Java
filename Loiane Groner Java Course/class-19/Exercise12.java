@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exercise11 {
+public class Exercise12 {
   public static void main (String[] args) {
     Scanner input = new Scanner(System.in);
 
@@ -11,14 +11,12 @@ public class Exercise11 {
       arrayA[i] = input.nextInt();
     };
     
-    int evenValues = 0;
+    int sumArray = 0;
     for (int i = 0; i < arrayA.length; i++) {
-      if (arrayA[i] % 2 == 0) {
-        evenValues++;
-      };
+      sumArray += arrayA[i];
     }
 
-    System.out.println("\nHá " + evenValues + " valores pares no array.");
+    System.out.println("A soma dos elementos no array é " + sumArrayf);
 
     input.close();
   }
