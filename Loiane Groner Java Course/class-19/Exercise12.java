@@ -16,7 +16,7 @@ public class Exercise12 {
       sumArray += arrayA[i];
     }
 
-    System.out.println("A soma dos elementos no array é " + sumArrayf);
+    System.out.println("A soma dos elementos no array é " + sumArray);
 
     input.close();
   }
