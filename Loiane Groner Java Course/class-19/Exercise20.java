@@ -19,5 +19,7 @@ public class Exercise20 {
     for (int i = 0; i < arrayA.length; i++) {
       System.out.println("US$" + (i + 1) + " = R$" + format.format(arrayA[i]));
     };
+
+    scanner.close();
   }
 }
