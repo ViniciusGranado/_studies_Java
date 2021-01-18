@@ -32,5 +32,7 @@ public class Exercise19 {
       System.out.println("Situação: " + (result[i] >= 7 ? "Aprovado" : "Reprovado"));
       System.out.println("-----------------------\n");
     }
+
+    input.close();
   }
 }
