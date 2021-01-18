@@ -22,7 +22,7 @@ public class Exercise14 {
 
     double oddValuesMean = oddSumArray / oddValues;
 
-    System.out.println("\nA soma dos elementos múltiplos de 5 no array é " + oddValuesMean);
+    System.out.println("\nA soma dos elementos ímpares no array é " + oddValuesMean);
 
     input.close();
   }
