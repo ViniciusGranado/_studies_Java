@@ -40,5 +40,7 @@ public class Exercise26 {
         System.out.print(arrayC[i] + ", ");
       }
     }
+
+    input.close();
   }
 }
