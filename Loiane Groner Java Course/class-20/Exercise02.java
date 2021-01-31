@@ -2,7 +2,9 @@ public class Exercise02 {
   public static void main (String[] args) {
     int[][] values = new int[10][10];
     int biggestValueLine5;
+    int smallestValueLine5;
     int biggestValueColumn7;
+    int smallestValueColumn7;
 
     // Insert random values on the array
     for (int i = 0; i < values.length; i++) {
@@ -11,19 +13,27 @@ public class Exercise02 {
       }
     }
 
-    // Get biggest value on line 5
+    // Get biggest and smallest values on line 5
     biggestValueLine5 = values[5][0];
+    smallestValueLine5 = values[5][0];
     for (int column = 1; column < values[5].length; column++) {
       if (values[5][column] > biggestValueLine5) {
         biggestValueLine5 = values[5][column];
       };
+      if (values[5][column] < smallestValueLine5) {
+        smallestValueLine5 = values[5][column];
+      };
     };
 
-    // Get biggest value on column 7
+    // Get biggest and smallest values on column 7
     biggestValueColumn7 = values[0][7];
+    smallestValueColumn7 = values[0][7];
     for (int line = 1; line < values[7].length; line++) {
       if (values[line][7] > biggestValueColumn7) {
         biggestValueColumn7 = values[line][7];
+      };
+      if (values[line][7] < smallestValueColumn7) {
+        smallestValueColumn7 = values[line][7];
       };
     };
 
@@ -37,6 +47,8 @@ public class Exercise02 {
 
     // Print the result
     System.out.println("O maior valor da linha 5 é " + biggestValueLine5);
+    System.out.println("O menos valor da linha 5 é " + smallestValueLine5);
     System.out.println("O maior valor da coluna 7 é " + biggestValueColumn7);
+    System.out.println("O menor valor da coluna 7 é " + smallestValueColumn7);
   }
 }
