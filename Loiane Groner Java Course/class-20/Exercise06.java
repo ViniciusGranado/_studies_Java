@@ -101,10 +101,19 @@ public class Exercise06 {
       }
 
       playNumber++;
+
+      if (playNumber == 9) {
+        gameHasEnded = true;
+      }
     } while (!gameHasEnded);
 
+    // Print game results
     System.out.println("\nJOGO FINALIZADO!");
-    System.out.println(currentPlayer + "ganhou");
+    if (playNumber < 9) {
+      System.out.println(currentPlayer + " ganhou");
+    } else {
+      System.out.println("Deu velha!");
+    }
     input.close();
   }
 }
