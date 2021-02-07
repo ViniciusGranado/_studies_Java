@@ -7,6 +7,6 @@ public class LivroLivraria {
   String language;
   int edition;
   String isbn;
-  float price;
+  double price;
   boolean hasEbookVersion;
 }

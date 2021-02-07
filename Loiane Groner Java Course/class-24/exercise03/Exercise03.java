@@ -1,6 +1,6 @@
 public class Exercise03 {
   public static void main (String[] args) {
-    Book book = new Book();
+    LivroLivraria book = new LivroLivraria();
     book.title = "Fluam, Minhas Lágrimas, Disse o Policial";
     book.author = "Philip K Dick";
     book.pages = 256;
