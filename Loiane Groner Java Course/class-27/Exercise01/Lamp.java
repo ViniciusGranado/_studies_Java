@@ -1,3 +1,5 @@
+package Exercise01;
+
 public class Lamp {
   String brand;
   String model;
