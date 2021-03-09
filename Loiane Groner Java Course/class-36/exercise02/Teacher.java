@@ -30,10 +30,6 @@ public class Teacher {
   }
 
   public void getinfo () {
-    System.out.println("\n---------------------------");
-    System.out.println("     DADOS DO PROFESSOR    ");
-    System.out.println("---------------------------\n");
-
     System.out.println("Nome do curso: " + getName());
     System.out.println("Departamento: " + getDepartment());
     System.out.println("E-mail: " + getEmail());

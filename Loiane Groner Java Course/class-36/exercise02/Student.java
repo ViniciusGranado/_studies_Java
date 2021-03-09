@@ -28,4 +28,14 @@ public class Student {
   public void setGrades(int[] grades) {
     this.grades = grades;
   }
+
+  public void getInfo (int studentNumber) {
+    System.out.println("Aluno " + (studentNumber) + ": " + getName());
+
+    for (int j = 0; j < getGrades().length; j++) {
+      System.out.println("Nota " + (j + 1) + ": " + getGrades()[j]);
+    }
+
+    System.out.println("---------------------------");
+  }
 }

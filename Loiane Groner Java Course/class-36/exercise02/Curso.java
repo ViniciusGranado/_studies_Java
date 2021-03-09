@@ -43,18 +43,12 @@ public class Curso {
   }
 
   public void getInfo () {
-    System.out.println("---------------------------");
-    System.out.println("       DADOS DO CURSO      ");
-    System.out.println("---------------------------\n");
-
     System.out.println("Nome do curso: " + name);
     System.out.println("Horário: " + time);
   }
 
   public void getStudentsInfo () {
-    System.out.println("\n---------------------------");
-    System.out.println("      DADOS DOS ALUNOS     ");
-    System.out.println("---------------------------\n");
+
 
     for (int i = 0; i < getStudents().length; i++) {
       Student estudante = new Student();
@@ -72,8 +66,24 @@ public class Curso {
   }
       
   public void getCourseInfo () {
+    System.out.println("---------------------------");
+    System.out.println("       DADOS DO CURSO      ");
+    System.out.println("---------------------------\n");
+
     this.getInfo();
+
+    System.out.println("\n---------------------------");
+    System.out.println("     DADOS DO PROFESSOR    ");
+    System.out.println("---------------------------\n");
+
     teacher.getinfo();
-    getStudentsInfo();
+
+    System.out.println("\n---------------------------");
+    System.out.println("      DADOS DOS ALUNOS     ");
+    System.out.println("---------------------------\n");
+
+    for (int i = 0; i < students.length; i++) {
+      students[i].getInfo(i + 1);
+    }
   }
 }
