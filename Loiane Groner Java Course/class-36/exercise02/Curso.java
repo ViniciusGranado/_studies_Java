@@ -85,5 +85,24 @@ public class Curso {
     for (int i = 0; i < students.length; i++) {
       students[i].getInfo(i + 1);
     }
+
+    System.out.println("\n---------------------------");
+    System.out.println("       MÉDIA DA TURMA      ");
+    System.out.println("---------------------------\n");
+
+    int[] grades = new int[4];
+    int gradesSum = 0;
+    int numberOfGrades = 0;
+    for (int i = 0; i < students.length; i++) {
+      grades = students[i].getGrades();
+      
+      for (int j = 0; j < grades.length; j++) {
+        gradesSum += grades[j];
+        numberOfGrades++;
+      }
+    }
+
+    double classMean = (double) gradesSum / (double) numberOfGrades;
+    System.out.println("Média da turma: " + classMean);
   }
 }
