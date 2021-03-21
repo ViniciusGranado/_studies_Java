@@ -1,4 +1,4 @@
-//package Exercise03;
+package Exercise03;
 
 public class Animal {
   private String name;
@@ -67,5 +67,14 @@ public class Animal {
 
   public void setSpeed(double speed) {
     this.speed = speed;
+  }
+
+  public void printInfo() {
+    System.out.println("Animal: " + name);
+    System.out.println("Comprimento: " + length + " cm");
+    System.out.println("Patas: " + numberOfPaws);
+    System.out.println("Cor: " + color);
+    System.out.println("Ambiente: " + environment);
+    System.out.println("Velocidade: " + speed + " m/s");
   }
 }

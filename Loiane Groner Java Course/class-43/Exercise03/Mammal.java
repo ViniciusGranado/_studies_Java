@@ -1,4 +1,4 @@
-//package Exercise03;
+package Exercise03;
 
 public class Mammal extends Animal {
   private String food;
@@ -15,5 +15,15 @@ public class Mammal extends Animal {
 
   public void setFood(String food) {
     this.food = food;
+  }
+
+  public void printInfo() {
+    System.out.println("Animal: " + super.getName());
+    System.out.println("Comprimento: " + super.getLength() + " cm");
+    System.out.println("Patas: " + super.getNumberOfPaws());
+    System.out.println("Cor: " + super.getColor());
+    System.out.println("Ambiente: " + super.getEnvironment());
+    System.out.println("Velocidade: " + super.getSpeed() + " m/s");
+    System.out.println("Alimento: " + food);
   }
 }
