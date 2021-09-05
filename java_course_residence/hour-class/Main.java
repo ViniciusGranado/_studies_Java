@@ -24,6 +24,14 @@ public class Main {
 
       // test hashCode
       System.out.println(horario.hashCode());
+
+      // test clones
+      Horario clone1 = new Horario(horario);
+      Horario clone2 = (Horario) horario.clone();
+
+      System.out.println(horario);
+      System.out.println(clone1);
+      System.out.println(clone2);
     } catch (Exception e) {
       System.out.println(e.getMessage());
     }

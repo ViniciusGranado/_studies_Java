@@ -1,4 +1,4 @@
-public class Horario {
+public class Horario implements Cloneable {
   private byte hora;
   private byte minuto;
   private byte segundo;
@@ -11,7 +11,7 @@ public class Horario {
     return true;
   }
 
-  // constructor
+  // constructors
   Horario(byte hora, byte minuto, byte segundo) throws Exception {
     if (!this.validaHorario(hora, minuto, segundo)) {
       throw new Exception("Horário inválido");
@@ -20,6 +20,27 @@ public class Horario {
     this.hora = hora;
     this.minuto = minuto;
     this.segundo = segundo;
+  }
+
+  Horario(Horario model) throws Exception {
+    if (model == null) {
+      throw new Exception("Modelo ausente");
+    };
+
+    this.hora = model.hora;
+    this.minuto = model.minuto;
+    this.segundo = model.segundo;
+  }
+
+  // clone
+  public Object clone() {
+    Horario ret = null;
+
+    try {
+      ret = new Horario(this);
+    } catch(Exception e) {}
+
+    return ret;
   }
 
   //getters
