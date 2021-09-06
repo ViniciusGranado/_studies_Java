@@ -1,4 +1,4 @@
-public class Horario implements Cloneable {
+public class Horario implements Cloneable, Comparable<Horario> {
   private byte hora;
   private byte minuto;
   private byte segundo;
@@ -81,6 +81,7 @@ public class Horario implements Cloneable {
     this.segundo = segundo;
   }
 
+  // toString
   @Override
   public String toString() {
     return String.format("%02d", this.hora) + ":" +
@@ -88,6 +89,7 @@ public class Horario implements Cloneable {
            String.format("%02d", this.segundo);
   }
 
+  // equals
   @Override
   public boolean equals(Object obj) {
     if (this == obj) return true;
@@ -101,6 +103,7 @@ public class Horario implements Cloneable {
             this.segundo == horario.segundo);
   }
 
+  // hashCode
   @Override
   public int hashCode() {
     int hash = 123;
@@ -112,5 +115,17 @@ public class Horario implements Cloneable {
     if (hash < 0) hash = -hash;
 
     return hash;
+  }
+
+  // compareTo
+  public int compareTo(Horario horario) {
+    if (this.hora < horario.hora) return -1;
+    if (this.hora > horario.hora) return 1;
+    if (this.minuto < horario.minuto) return -1;
+    if (this.minuto < horario.minuto) return 1;
+    if (this.segundo < horario.segundo) return -1;
+    if (this.segundo < horario.segundo) return 1;
+
+    return 0;
   }
 }

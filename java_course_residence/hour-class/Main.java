@@ -32,6 +32,13 @@ public class Main {
       System.out.println(horario);
       System.out.println(clone1);
       System.out.println(clone2);
+
+      // test compareTo
+      Horario horario03 =  new Horario((byte) 5, (byte) 8,(byte) 12);
+
+      System.out.println(horario.compareTo(horario03));
+      System.out.println(horario03.compareTo(horario));
+      System.out.println(horario.compareTo(horario));
     } catch (Exception e) {
       System.out.println(e.getMessage());
     }
