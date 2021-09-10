@@ -1,3 +1,7 @@
+// Alunos
+// Marilia Franco de Andrade
+// Vinicius Rafael Granado
+
 public class Horario implements Cloneable, Comparable<Horario> {
   private byte hora;
   private byte minuto;
