@@ -1,4 +1,6 @@
-import java.util.ResourceBundle.Control;
+// Alunos
+// Marilia Franco de Andrade
+// Vinicius Rafael Granado
 
 public class ControladorDeErros implements Cloneable
 {

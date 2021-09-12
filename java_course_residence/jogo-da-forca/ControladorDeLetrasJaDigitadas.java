@@ -1,3 +1,7 @@
+// Alunos
+// Marilia Franco de Andrade
+// Vinicius Rafael Granado
+
 public class ControladorDeLetrasJaDigitadas implements Cloneable
 {
     private String letrasJaDigitadas;
@@ -72,6 +76,8 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         int hash = 123;
 
         hash = 13 * hash + new String(this.letrasJaDigitadas).hashCode();
+
+        if (hash < 0) hash = -hash;
 
         return hash;
     }

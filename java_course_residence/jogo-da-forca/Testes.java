@@ -1,3 +1,7 @@
+// Alunos
+// Marilia Franco de Andrade
+// Vinicius Rafael Granado
+
 public class Testes {
   public static void main(String[] args) {
     // Testes classe Palavra
@@ -53,7 +57,7 @@ public class Testes {
     System.out.println(palavra.getTamanho());
 
     // toString
-    System.out.println(palavra.toString());
+    System.out.println(palavra);
 
     // equals
     Palavra testePalavra01 = null;
@@ -154,7 +158,7 @@ public class Testes {
     System.out.println(tracinhos.isAindaComTracinhos());
 
     // toString
-    System.out.println(tracinhos.toString());
+    System.out.println(tracinhos);
 
     // equals
     Tracinhos testeTracinhos01 = null;
@@ -205,5 +209,156 @@ public class Testes {
     System.out.println(copia);
     System.out.println(copia == tracinhos);
     System.out.println(copia.equals(tracinhos));
+
+    // Testes classe ControladorDeLetrasJaDigitadas
+    System.out.println("\n----------------------------------------");
+    System.out.println("   CLASSE ControladorDeLetrasJaDigitadas  ");
+    System.out.println("----------------------------------------\n");
+
+    ControladorDeLetrasJaDigitadas controladorLetras = new ControladorDeLetrasJaDigitadas();
+
+    // registre
+    try {
+      controladorLetras.registre('a');
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    try {
+      controladorLetras.registre('a');
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    // isJaDigitada
+    try {
+      controladorLetras.isJaDigitada('a');
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    }
+    
+    try {
+      controladorLetras.isJaDigitada('e');
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    // toString
+    System.out.println(controladorLetras);
+
+    // equals
+    ControladorDeLetrasJaDigitadas testeControlador01 = new ControladorDeLetrasJaDigitadas();
+    ControladorDeLetrasJaDigitadas testeControlador02 = new ControladorDeLetrasJaDigitadas();
+
+    try {
+      testeControlador01.registre('a');
+    } catch(Exception e) {};
+
+    try {
+      testeControlador02.registre('e');
+    } catch(Exception e) {};
+
+    System.out.println(controladorLetras.equals(testeControlador01));
+    System.out.println(controladorLetras.equals(testeControlador02));
+
+    // hashCode
+    System.out.println(controladorLetras.hashCode());
+
+    // clone
+    ControladorDeLetrasJaDigitadas clone = null;
+
+    try {
+      clone = (ControladorDeLetrasJaDigitadas) controladorLetras.clone();
+    } catch (Exception e) {}
+
+    System.out.println(controladorLetras == clone);
+    System.out.println(controladorLetras.equals(clone));
+
+    // Testes classe ControladorDeErros
+    System.out.println("\n------------------------------");
+    System.out.println("   CLASSE ControladorDeErros  ");
+    System.out.println("------------------------------\n");
+
+    ControladorDeErros controladorErros = null;
+
+    try {
+      controladorErros = new ControladorDeErros(-1);
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    try {
+      controladorErros = new ControladorDeErros(2);
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    // isAtingidoMaximoDeErros / registreUmErro
+    System.out.println(controladorErros.isAtingidoMaximoDeErros());
+
+    try {
+      controladorErros.registreUmErro();
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    System.out.println(controladorErros.isAtingidoMaximoDeErros());
+
+    try {
+      controladorErros.registreUmErro();
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    System.out.println(controladorErros.isAtingidoMaximoDeErros());
+
+    try {
+      controladorErros.registreUmErro();
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    // toString
+    System.out.println(controladorErros);
+
+    // equals
+    ControladorDeErros testeControladorErros01 = null;
+    ControladorDeErros testeControladorErros02 = null;
+
+    try {
+      testeControladorErros01 = new ControladorDeErros(2);
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    try {
+      testeControladorErros02 = new ControladorDeErros(2);
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    try {
+      testeControladorErros01.registreUmErro();
+      testeControladorErros01.registreUmErro();
+    } catch(Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    System.out.println(controladorErros.equals(testeControladorErros01));
+    System.out.println(controladorErros.equals(testeControladorErros02));
+
+    // hashCode
+    System.out.println(controladorErros.hashCode());
+
+    // clone
+    ControladorDeErros cloneControladorErros = null;
+    try {
+      cloneControladorErros = (ControladorDeErros) controladorErros.clone();
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+    }
+
+    System.out.println(controladorErros == cloneControladorErros);
+    System.out.println(controladorErros.equals(cloneControladorErros));
   }
 }

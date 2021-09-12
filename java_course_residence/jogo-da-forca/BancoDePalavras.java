@@ -1,3 +1,7 @@
+// Alunos
+// Marilia Franco de Andrade
+// Vinicius Rafael Granado
+
 public class BancoDePalavras
 {
     private static String[] palavras = 

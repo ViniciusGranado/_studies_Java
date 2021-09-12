@@ -1,3 +1,7 @@
+// Alunos
+// Marilia Franco de Andrade
+// Vinicius Rafael Granado
+
 import java.util.Arrays;
 
 public class Tracinhos implements Cloneable
@@ -87,6 +91,8 @@ public class Tracinhos implements Cloneable
         if (this.texto != null) {
             hash = 13 * hash + this.texto.hashCode();
         }
+
+        if (hash < 0) hash = -hash;
 
         return hash;
     }

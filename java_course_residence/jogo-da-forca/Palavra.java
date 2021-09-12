@@ -1,3 +1,7 @@
+// Alunos
+// Marilia Franco de Andrade
+// Vinicius Rafael Granado
+
 public class Palavra implements Comparable<Palavra>
 {
     private String texto;
