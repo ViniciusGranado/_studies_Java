@@ -1,6 +1,12 @@
+// Alunos
+// Natalie Gomes de Moraes 21109
+// Vinicius Rafael Granado 21731
+
 //import java.io.BufferedReader;
 //import java.io.InputStreamReader;
 //import java.io.IOException;
+
+package Teclado;
 
 import java.io.*;
 

@@ -1,8 +1,15 @@
 // Alunos
-// Marilia Franco de Andrade
-// Vinicius Rafael Granado
+// Natalie Gomes de Moraes 21109
+// Vinicius Rafael Granado 21731
 
 import java.io.*;
+
+import BancoDePalavras.BancoDePalavras;
+import ControladorDeErros.ControladorDeErros;
+import ControladorDeLetrasJaDigitadas.ControladorDeLetrasJaDigitadas;
+import Palavra.Palavra;
+import Teclado.Teclado;
+import Tracinhos.Tracinhos;
 
 public class Forca
 {

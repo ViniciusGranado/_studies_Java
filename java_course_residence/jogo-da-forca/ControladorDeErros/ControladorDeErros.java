@@ -2,6 +2,8 @@
 // Marilia Franco de Andrade
 // Vinicius Rafael Granado
 
+package ControladorDeErros;
+
 public class ControladorDeErros implements Cloneable
 {
     private int qtdMax, qtdErr=0;
