@@ -26,22 +26,23 @@ public class Testes {
       System.out.println(e.getMessage());
     }
 
+    
     // isJaDigitada
     try {
-      controladorLetras.isJaDigitada('a');
+      System.out.println(controladorLetras.isJaDigitada('a'));
     } catch(Exception e) {
       System.out.println(e.getMessage());
     }
     
     try {
-      controladorLetras.isJaDigitada('e');
+      System.out.println(controladorLetras.isJaDigitada('e'));
     } catch(Exception e) {
       System.out.println(e.getMessage());
     }
-
+  
     // toString
     System.out.println(controladorLetras);
-
+    
     // equals
     ControladorDeLetrasJaDigitadas testeControlador01 = new ControladorDeLetrasJaDigitadas();
     ControladorDeLetrasJaDigitadas testeControlador02 = new ControladorDeLetrasJaDigitadas();

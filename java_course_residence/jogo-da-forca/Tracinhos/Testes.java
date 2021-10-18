@@ -26,7 +26,7 @@ public class Testes {
       System.out.println(e.getMessage());
     }
 
-    // releve
+    // revele
     try {
       tracinhos.revele(-1, 'a');
     } catch(Exception e) {

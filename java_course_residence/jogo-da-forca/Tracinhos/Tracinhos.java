@@ -16,7 +16,7 @@ public class Tracinhos implements Cloneable
 		// instancia this.texto com um vetor com tamanho igual qtd.
 		// preenche this.texto com underlines (_).
 
-        if (qtd < 0) throw new Exception("Quantidade invalida");
+        if (qtd <= 0) throw new Exception("Quantidade invalida");
 
         this.texto = new char[qtd];
         Arrays.fill(this.texto, '_');

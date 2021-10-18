@@ -18,6 +18,14 @@ public class ControladorDeErros implements Cloneable
 
         this.qtdMax = qtdMax;
     }
+    
+    public boolean isAtingidoMaximoDeErros  ()
+    {
+        // returna true se this.qtdErr for igual a this.qtdMax,
+        // ou ent�o false, caso contrario.
+
+        return this.qtdErr == this.qtdMax;
+    }
 
     public void registreUmErro () throws Exception
     {
@@ -30,14 +38,6 @@ public class ControladorDeErros implements Cloneable
         this.qtdErr++;
     }
 
-    public boolean isAtingidoMaximoDeErros  ()
-    {
-        // returna true se this.qtdErr for igual a this.qtdMax,
-        // ou ent�o false, caso contrario.
-
-        return this.qtdErr == this.qtdMax;
-    }
-
     public String toString ()
     {
         return this.qtdErr + "/" + this.qtdMax;
@@ -48,8 +48,6 @@ public class ControladorDeErros implements Cloneable
         // verificar se this e obj possuem o mesmo conte�do, retornando
         // true no caso afirmativo ou false no caso negativo
 
-        
-        
         if (this == obj) return true;
         if (obj == null) return false;
         if (this.getClass() != obj.getClass()) return false;

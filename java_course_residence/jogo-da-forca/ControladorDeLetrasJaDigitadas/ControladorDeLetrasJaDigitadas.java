@@ -21,7 +21,9 @@ public class ControladorDeLetrasJaDigitadas implements Cloneable
         // ou false em caso negativo
 
         for (int i = 0; i < letrasJaDigitadas.length(); i++) {
-            if (letrasJaDigitadas.charAt(i) == letra) return true;
+            if (letrasJaDigitadas.charAt(i) == letra) {
+                return true;
+            }
         };
 
         return false;
