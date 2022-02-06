@@ -21,7 +21,8 @@ public class ListExercise {
       Integer id = scanner.nextInt();
 
       System.out.print("Name: ");
-      String name = scanner.next();
+      scanner.nextLine();
+      String name = scanner.nextLine();
 
       System.out.print("Salary: ");
       Double salary = scanner.nextDouble();
@@ -29,7 +30,7 @@ public class ListExercise {
       employees.add(new Employee(id, name, salary));
     }
 
-    System.out.print("Enter the employee ID that will have salary readjustment: ");
+    System.out.print("\nEnter the employee ID that will have salary readjustment: ");
     Integer wantedId = scanner.nextInt();
 
     Employee employeeWithReadjustment = employees.stream()
