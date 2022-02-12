@@ -4,18 +4,19 @@ import entitities.enums.WorkerLevel;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 public class Worker {
   private String name;
   private WorkerLevel level;
   private Double baseSalary;
+  private Department department;
   private ArrayList<HourContract> contracts;
 
-  public Worker(String name, WorkerLevel level, Double baseSalary, Integer numberOfContracts) {
+  public Worker(String name, WorkerLevel level, Double baseSalary, Department department, int numberOfContracts) {
     this.name = name;
     this.level = level;
     this.baseSalary = baseSalary;
+    this.department = department;
     this.contracts = new ArrayList<HourContract>(numberOfContracts);
   }
 
@@ -33,6 +34,14 @@ public class Worker {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public Department getDepartment() {
+    return department;
+  }
+
+  public void setDepartment(Department department) {
+    this.department = department;
   }
 
   public WorkerLevel getLevel() {

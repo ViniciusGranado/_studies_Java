@@ -21,7 +21,7 @@ public class WorkerContracts {
     System.out.print("");
 
     System.out.print("Enter department's name: ");
-    String dptmInpt = scanner.nextLine();
+    String department = scanner.nextLine();
 
     System.out.println("\nEnter worker data:");
 
@@ -37,8 +37,7 @@ public class WorkerContracts {
     System.out.print("How many contracts to this worker? ");
     int numberOfContracts = scanner.nextInt();
 
-    Department department = new Department(dptmInpt);
-    Worker worker = new Worker(name, WorkerLevel.valueOf(level), baseSlr, numberOfContracts);
+    Worker worker = new Worker(name, WorkerLevel.valueOf(level), baseSlr, new Department(department), numberOfContracts);
 
     for (int i = 0; i < numberOfContracts; i++) {
       System.out.printf("\nEnter contract #%d data:", i + 1);
@@ -47,14 +46,12 @@ public class WorkerContracts {
       String dateString = scanner.next();
       Date date = dateFormat.parse(dateString);
 
-
       System.out.print("Value per hour: ");
       Double valuePerHour = scanner.nextDouble();
 
       System.out.print("Duration (hours): ");
       Integer duration = scanner.nextInt();
 
-      System.out.println(date);
       worker.addContract(new HourContract(date, valuePerHour, duration));
     }
 
@@ -67,7 +64,7 @@ public class WorkerContracts {
     Double income = worker.income(calendar.get(Calendar.MONTH), calendar.get(Calendar.YEAR));
 
     System.out.printf("\nName: %s", worker.getName());
-    System.out.printf("\nDepartment: %s", department.getName());
+    System.out.printf("\nDepartment: %s", worker.getDepartment().getName());
     System.out.printf("\nIncome for %s/%s: %.2f", calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.YEAR), income);
 
     scanner.close();
