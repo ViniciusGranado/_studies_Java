@@ -14,7 +14,7 @@ public class WorkerContracts {
   public static void main(String[] args) throws ParseException {
     Locale.setDefault(Locale.US);
     Scanner scanner = new Scanner(System.in);
-    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy"); 
     Calendar calendar = Calendar.getInstance();
 
     System.out.println("");

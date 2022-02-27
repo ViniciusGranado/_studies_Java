@@ -63,17 +63,14 @@ public class Order {
     StringBuilder string = new StringBuilder();
     string.append("Order moment: ").append(moment)
             .append("\nOrder status: ").append(status)
-            .append("\nClient: ").append(client.getName()).append(" (" + client.getBirthDate() + ") - ").append(client.getEmail())
+            .append(client)
             .append("\nOrder items:");
 
     for(OrderItem item : items) {
-      string.append("\n" + item.getProduct().getName())
-              .append(", $" + String.format("%.2f", item.getProduct().getPrice()))
-              .append(", Quantity: " + item.getQuantity())
-              .append(", Subtotal: $" + String.format("%.2f", item.subTotal()));
+      string.append(item);
     };
 
-    string.append("\nTotal price: $").append(total());
+    string.append("\nTotal price: $").append(String.format("%.2f", total()));
 
     return string.toString();
   }
