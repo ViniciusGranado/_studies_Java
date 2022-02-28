@@ -1,6 +1,7 @@
 package model.entities;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -12,11 +13,11 @@ public class Contract {
 
   public Contract() {}
 
-  public Contract(String number, Date date, Double value, List<Installment> installments) {
+  public Contract(String number, Date date, Double value) {
     this.number = number;
     this.date = date;
     this.value = value;
-    this.installments = installments;
+    installments = new ArrayList<>();
   }
 
   public String getNumber() {
@@ -43,13 +44,20 @@ public class Contract {
     this.value = value;
   }
 
+  public List<Installment> getInstallments() {
+    return installments;
+  }
+
+  public void setInstallments(List<Installment> installments) {
+    this.installments = installments;
+  }
+
   @Override
   public String toString() {
-    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
     StringBuilder ret = new StringBuilder();
 
     for(Installment installment : installments) {
-      ret.append(sdf.format(installment.getDueDate())).append(" - ").append(installment.amount).append("\n");
+      ret.append(installment).append("\n");
     }
 
     return ret.toString();

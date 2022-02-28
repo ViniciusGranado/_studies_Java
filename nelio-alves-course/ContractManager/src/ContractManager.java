@@ -1,9 +1,7 @@
 import model.entities.Contract;
-import model.entities.Installment;
-import model.services.InstallmentCalculator;
-import model.services.PayPalTaxService;
+import model.services.ContractService;
+import model.services.PaypalService;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -28,9 +26,11 @@ public class ContractManager {
     System.out.print("Enter number of installments: ");
     int installmentsNumber = scanner.nextInt();
 
-    List<Installment> installments = InstallmentCalculator.calculate(date, value, installmentsNumber, new PayPalTaxService());
+    Contract contract = new Contract(number, date, value);
 
-    Contract contract = new Contract(number, date, value, installments);
+    ContractService cs = new ContractService(new PaypalService());
+
+    cs.processContract(contract, installmentsNumber);
 
     System.out.println("\nInstallments:");
     System.out.println(contract.toString());
