@@ -16,12 +16,12 @@ public class ElectionManager {
       String line = br.readLine();
 
       while (line != null) {
-        String[] candidateVotesArray = line.split(",");
+        String[] candidateFields = line.split(",");
 
-        String candidateName = candidateVotesArray[0];
-        int candidateVotes = Integer.parseInt(candidateVotesArray[1]);
+        String candidateName = candidateFields[0];
+        int candidateVotes = Integer.parseInt(candidateFields[1]);
 
-        if (candidates.get(candidateName) == null) {
+        if (!candidates.containsKey(candidateName)) {
           candidates.put(candidateName, candidateVotes);
         } else {
           int votesSum = candidates.get(candidateName) + candidateVotes;
