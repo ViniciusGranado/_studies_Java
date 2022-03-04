@@ -1,6 +1,5 @@
-package model.entities;
+package entities;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 public class Person implements Serializable {
