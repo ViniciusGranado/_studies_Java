@@ -13,12 +13,12 @@ public class JpaCourse {
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("course-jpa");
     EntityManager em = emf.createEntityManager();
 
-    em.getTransaction().begin();
-    em.persist(p1);
-    em.persist(p2);
-    em.persist(p3);
-    em.getTransaction().commit();
+    Person p = em.find(Person.class, 2);
+    System.out.println(p);
 
     System.out.println("Done!");
+
+    em.close();
+    emf.close();
   }
 }
